@@ -1,0 +1,6 @@
+Initially polling was done -> which means each sec. sending req. wherther any msg is arrived for me or not in chat application -> uni-directional (only client can send req. to server and server cant give any req. to client on its own) -> this is what req. - res. cycle
+polling is resource intensive -> more load to server
+so Websocket came to picture -> bi directional -> consistent connection -> Full duplex connection
+
+HTTP req. + header:websocket -> upgrading normal http req. to ws (upgrading the connection) -> sent to server 
+
