@@ -9,10 +9,8 @@ const io = new Server(server);
 app.use(express.static("./public"));
 
 io.on("connection", (socket) => {
-  console.log("a user connected : ", socket.id);
-  socket.on(socket.id, (msg) => {
-    console.log(msg, "ID : ", socket.id);
-    io.emit("messages", socket.id + " : " + msg);
+  socket.on("chat message", (msg) => {
+    io.emit("chat message", msg);
   });
 });
 
